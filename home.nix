@@ -31,6 +31,29 @@
       gu = "gitui";
     };
   };
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+
+    shellAliases = {
+      ll = "ls -l";
+      gu = "gitui";
+      update = "sudo nixos-rebuild switch";
+    };
+
+    history = {
+      size = 10000;
+      path = "${config.xdg.dataHome}/zsh/history";
+    };
+
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" ];
+      theme = "avit";
+    };
+  };
 
   home.stateVersion = "24.05";
 
