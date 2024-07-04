@@ -109,6 +109,7 @@
   environment.systemPackages = with pkgs; [
     neovim
     git
+    gitui
     wget
   ];
 
